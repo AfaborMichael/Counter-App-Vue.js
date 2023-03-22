@@ -1,11 +1,13 @@
 <template>
-  <header className="navbar">
-    <h3 className="logo">Counter App</h3>
-    <router-link to="/" className="home">
+  <header class="navbar">
+    <router-link to="/" class="home">
       <li>Home</li>
     </router-link>
-    <router-link to="/counter" className="signup">
+    <router-link to="/counter" class="signup">
       <li>Counter</li>
+    </router-link>
+    <router-link to="/:catchAll(.*)*" class="signup">
+      <li>404</li>
     </router-link>
   </header>
 </template>
@@ -41,7 +43,11 @@ body {
     rgba(73, 139, 173, 1) 94%,
     rgba(123, 213, 223, 1) 100%
   );
+
   color: white;
+}
+.navbar li {
+  list-style-type: none;
 }
 
 .logo {
@@ -378,155 +384,6 @@ body {
   align-items: center;
 }
 
-.Git-1 {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 80%;
-  justify-content: space-evenly;
-}
-
-.Git-1-login {
-  color: #1b73dc;
-  font-weight: bold;
-  padding: 10px;
-  text-decoration: none;
-}
-
-.Git-1-public {
-  align-self: center;
-
-  font-weight: 100;
-  padding: 10px;
-  width: 80px;
-  border-radius: 10px;
-  color: black;
-}
-
-.Git-1-description {
-  font-weight: 100;
-  padding: 10px;
-  color: black;
-}
-
-.Git-1-homepage {
-  font-weight: 100;
-  padding: 10px;
-  color: #1b73dc;
-}
-
-.Git-1-star-and-fork {
-  display: flex;
-  flex-wrap: wrap;
-  color: black;
-}
-
-.Git-1-stargazers {
-  font-weight: 100;
-  padding: 10px;
-  width: 80px;
-  color: black;
-  flex-basis: 50%;
-}
-
-.Git-1-forks {
-  font-weight: 100;
-  padding: 10px;
-  width: 80px;
-  color: black;
-  flex-basis: 50%;
-}
-
-.Git-1-Release {
-  height: 90px;
-  padding: 10px;
-  color: rgb(29, 26, 26);
-  font-weight: 500;
-}
-
-.Git-1-Release h6 {
-  margin-top: 20px;
-  color: black;
-}
-
-.Git-2 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.Git-2 button {
-  color: #fff;
-
-  background: linear-gradient(
-    0deg,
-    rgba(73, 139, 173, 1) 94%,
-    rgba(123, 213, 223, 1) 100%
-  );
-  font-size: 14px;
-  width: 200px;
-  display: inline-block;
-  padding: 0.6em 1em;
-  border-radius: 3px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.Git-2-button a {
-  color: #fff;
-  background: linear-gradient(
-    0deg,
-    rgba(73, 139, 173, 1) 94%,
-    rgba(123, 213, 223, 1) 100%
-  );
-  font-size: 14px;
-  text-decoration: none;
-  width: 200px;
-  display: inline-block;
-  padding: 0.6em 1em;
-  border-radius: 3px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  outline: #333333;
-  margin-bottom: 20px;
-}
-
-.pag-button {
-  font-size: 20px;
-
-  margin-left: 7px;
-}
-
-.pagination-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-weight: 200;
-  font-size: 15px;
-}
-
-.pagination-container :hover {
-  background-color: #333333;
-}
-
-.pagination-container button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  height: 40px;
-  width: 40px;
-  text-decoration: none;
-  transition: background-color 0.2s;
-  border: 1px solid #ddd;
-  cursor: pointer;
-}
-
-.pagination-container button.disabled {
-  opacity: 0.2;
-}
-
-/* .pagination-container a:hover:not(.active) {
-  background-color: #333333;
-} */
 .Error {
   display: flex;
   justify-content: center;
